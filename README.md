@@ -4,5 +4,5 @@ Learning the pygame library and trying to make an object oriented snake game wit
 - Add comments explaining the code
 - Create menu screens
 - Create scoring functionality
-- ~~Modify the code to use classes
+- ~~Modify the code to use classes~~
 - Create sprites and modify the code to use sprites
