@@ -1,6 +1,6 @@
 # Snake_OOP
 Learning the pygame library and trying to make an object oriented snake game with menu functionality and etc., more than just the bare bones.
-#TODO
+# TODO
 - Add comments explaining the code
 - Create menu screens
 - Create scoring functionality
