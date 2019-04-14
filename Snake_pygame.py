@@ -73,7 +73,7 @@ displayHeight = 600
 gameDisplay = pygame.display.set_mode((displayWidth, displayHeight))
 pygame.display.set_caption('Object Snake')
 clock = pygame.time.Clock()
-blockSize = 10
+blockSize = 20
 gameOverMsg = Text("Game over, press C to play again or Q to quit", red, None, 25)
 
 def gameLoop():
@@ -113,13 +113,14 @@ def gameLoop():
                 elif event.key == pygame.K_UP:
                     snake.dir_up()
 
-        if snake.lead_x + blockSize > displayWidth or snake.lead_x < 0 or snake.lead_y + blockSize > displayHeight or snake.lead_y < 0:
-            gameOver = True
-
         gameDisplay.fill(black)
         apple.draw_apple(red)
         snake.snake_move(snakeList, [])
         gameOver = snake.eat_self()
+        
+        if snake.lead_x + blockSize > displayWidth or snake.lead_x < 0 or snake.lead_y + blockSize > displayHeight or snake.lead_y < 0:
+            gameOver = True
+
         snake.draw_snake(snake.snakeList)
         pygame.display.update()
 
